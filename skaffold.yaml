@@ -1,0 +1,14 @@
+apiVersion: skaffold/v2beta1
+kind: Config
+metadata:
+  name: configmap-demo
+build:
+  artifacts:
+  - image: cycloides/configmapdemo
+deploy:
+  kubectl:
+    manifests:
+    - clusterRole.yaml
+    - config.yaml
+    - deployment.yaml
+    - service.yaml

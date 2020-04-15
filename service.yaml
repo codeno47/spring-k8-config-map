@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: configmapdemo
+  name: configmapdemo
+spec:
+  ports:
+  - name: 8089-8089
+    port: 8089
+    protocol: TCP
+    targetPort: 8089
+  selector:
+    app: configmapdemo
+  type: NodePort
+status:
+  loadBalancer: {}

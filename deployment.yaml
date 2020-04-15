@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: configmapdemo
+  name: configmapdemo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: configmapdemo
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: configmapdemo
+    spec:
+      containers:
+      - image: cycloides/configmapdemo
+        name: configmapdemo
+        resources: {}
+status: {}
